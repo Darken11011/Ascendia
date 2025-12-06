@@ -3,7 +3,7 @@ import './AutomationMenu.css';
 
 interface AutomationItem {
   id: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   description: string;
   setupPrice: number;
@@ -264,38 +264,6 @@ const AutomationMenu = () => {
     }
 
     return { totalSetup, totalMonthly };
-  };
-
-  const formatQuoteItem = (item: AutomationItem) => {
-    let description = `${item.title}: `;
-    const parts: string[] = [];
-
-    if (item.setupPrice > 0) {
-      parts.push(`£${item.setupPrice} setup`);
-    }
-    if (item.monthlyPrice > 0) {
-      parts.push(`£${item.monthlyPrice}/month`);
-    }
-
-    description += parts.join(' + ');
-
-    // Add tier/volume info in parentheses
-    if (item.id === 'phone-screening' && selectedPhoneTier) {
-      const tier = phoneTiers.find(t => t.id === selectedPhoneTier);
-      if (tier) {
-        const tierInfo = tier.label.match(/\(([^)]+)\)/)?.[1] || '';
-        description += ` (${tierInfo})`;
-      }
-    }
-
-    if (item.id === 'data-cleaning' && selectedDataVolume) {
-      const volume = dataVolumeOptions.find(v => v.id === selectedDataVolume);
-      if (volume) {
-        description += ` (${volume.description})`;
-      }
-    }
-
-    return description;
   };
 
   const { totalSetup, totalMonthly } = calculateTotal();
