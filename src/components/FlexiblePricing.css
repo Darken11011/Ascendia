@@ -1,0 +1,121 @@
+.flexible-pricing {
+  width: 100%;
+  background: var(--white);
+  padding: 5rem 2rem;
+}
+
+.flexible-pricing-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flexible-pricing-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.flexible-pricing-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.pricing-depends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.pricing-depends-title {
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 400;
+  margin: 0;
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.pricing-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.bullet {
+  color: #7c3aed;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.item-text {
+  line-height: 1.6;
+}
+
+.get-quote-btn {
+  margin-top: 1.5rem;
+  padding: 0.875rem 2.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.get-quote-btn:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.5);
+}
+
+.get-quote-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flexible-pricing {
+    padding: 3rem 1.5rem;
+  }
+
+  .flexible-pricing-title {
+    font-size: 1.75rem;
+  }
+
+  .flexible-pricing-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .pricing-list-item {
+    font-size: 0.875rem;
+  }
+}
+
